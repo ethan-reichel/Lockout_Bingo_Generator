@@ -1,0 +1,308 @@
+﻿<Window x:Class="Lockout_Bingo_Generator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:Lockout_Bingo_Generator"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+		Title="Bingosync Generator"
+		Width="800" MinWidth="800"
+		Height="450" MinHeight="450"
+		MouseLeftButtonDown="Window_Click">
+	<Window.Resources>
+		<Style TargetType="TabControl">
+			<Setter Property="Background" Value="Transparent"/>
+		</Style>
+
+		<Style TargetType="TabItem">
+			<Setter Property="Background" Value="#222255"/>
+			<Setter Property="Foreground" Value="Cyan"/>
+			<Style.Triggers>
+				<Trigger Property="IsSelected" Value="True">
+					<Setter Property="Foreground" Value="Blue"/>
+				</Trigger>
+			</Style.Triggers>
+		</Style>
+
+		<Style TargetType="ListView">
+			<Setter Property="Background" Value="Transparent"/>
+			<Setter Property="BorderThickness" Value="0"/>
+		</Style>
+
+		<Style TargetType="TextBox">
+			<Setter Property="Background" Value="Transparent"/>
+			<Setter Property="Foreground" Value="White"/>
+			<Setter Property="CaretBrush" Value="White"/>
+		</Style>
+	</Window.Resources>
+
+	<Grid Background="#000040">
+		<TabControl x:Name="MainTabControl"
+		Background="#222228">
+			<TabItem Header="Games List"
+			Width="100">
+				<Grid x:Name="Games_List">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="82*"/>
+						<ColumnDefinition Width="61*"/>
+						<ColumnDefinition Width="28*"/>
+						<ColumnDefinition Width="358*"/>
+						<ColumnDefinition Width="265*"/>
+					</Grid.ColumnDefinitions>
+					<Grid Grid.Column="0" Grid.ColumnSpan="4">
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="*"/>
+						</Grid.RowDefinitions>
+						<Label Content="Games"
+						Grid.Row="0"
+						Margin="10 0 0 0"
+						Foreground="White"/>
+						<Border BorderBrush="LightGray"
+						BorderThickness="2"
+						CornerRadius="5"
+						Grid.Row="1"
+						Margin="10 0 10 10">
+							<ListView x:Name="GamesList"
+							Margin="5"
+							Foreground="White">
+								<ListView.ItemContainerStyle>
+									<Style TargetType="ListViewItem">
+										<Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+									</Style>
+								</ListView.ItemContainerStyle>
+								<ListView.ItemTemplate>
+									<DataTemplate>
+										<Grid>
+											<Grid.ColumnDefinitions>
+												<ColumnDefinition Width="*"/>
+												<ColumnDefinition Width="Auto"/>
+												<ColumnDefinition Width="Auto"/>
+											</Grid.ColumnDefinitions>
+
+											<TextBlock Text="{Binding Title}"
+											Grid.Column="0"/>
+
+											<Button x:Name="OpenTabButton"
+											Content="Open Tab"
+											Click="OpenTab"
+											Grid.Column="1"
+											Background="LightCyan"
+											Width="60"
+											Height="20"
+											Margin="5 0 5 0"
+											Tag="{Binding}"
+											Visibility="Collapsed">
+											</Button>
+
+
+											<Button x:Name="DeleteButton"
+											Click="DeleteGame_Click"
+											Content="Delete"
+											Grid.Column="2"
+											Background="Red"
+											Foreground="White"
+											Width="50"
+											Height="20"
+											Tag="{Binding}"
+											Visibility="Collapsed">
+
+											</Button>
+
+										</Grid>
+
+										<DataTemplate.Triggers>
+											<DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=ListViewItem}, Path=IsSelected}" Value="True">
+												<Setter TargetName="OpenTabButton" Property="Visibility" Value="Visible"/>
+												<Setter TargetName="DeleteButton" Property="Visibility" Value="Visible"/>
+											</DataTrigger>
+										</DataTemplate.Triggers>
+									</DataTemplate>
+								</ListView.ItemTemplate>
+							</ListView>
+						</Border>
+					</Grid>
+					<StackPanel
+					Grid.Column="4">
+						<Label Content="Add Game:"
+						Grid.Column="0"
+						Foreground="White"
+						Margin="10 10 0 0"/>
+						<Border	BorderBrush="LightGray"
+						BorderThickness="2"
+						CornerRadius="3"
+						Grid.Column="1"
+						Margin="10 0 10 10 ">
+							<TextBox x:Name="Input_Box"
+							MinHeight="30"
+							KeyDown="GameInput_KeyDown"/>
+						</Border>
+						<Button Click="AddGameButton_Click"
+							Width="100" 
+							Height="20" 
+							Content="Add Game"
+							Margin="0"/>
+					</StackPanel>
+				</Grid>
+
+			</TabItem>
+			<TabItem Header="TestTab"
+			Width="100">
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="2*"/>
+						<ColumnDefinition Width="3*"/>
+						<ColumnDefinition Width="3*"/>
+					</Grid.ColumnDefinitions>
+					<Grid Grid.Column="0">
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="*"/>
+						</Grid.RowDefinitions>
+						<Label Content="Categories"
+							Margin="5 0 0 0"
+							Foreground="White"
+							Grid.Row="0"/>
+						<Border
+							BorderBrush="LightCyan"
+							BorderThickness="2"
+							Grid.Row="1"
+							CornerRadius="3"
+							Margin="2">
+							<ListView/>
+						</Border>
+					</Grid>
+					<Grid Grid.Column="1">
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="*"/>
+						</Grid.RowDefinitions>
+						<Label Content="Goals"
+							Margin="5 0 0 0"
+							Foreground="White"
+							Grid.Row="0"/>
+						<Border
+							BorderBrush="LightCyan"
+							BorderThickness="2"
+							Grid.Row="1"
+							CornerRadius="3"
+							Margin="2">
+							<ListView/>
+						</Border>
+					</Grid>
+					<Grid
+						Grid.Column="2">
+						
+					</Grid>
+				</Grid>
+			</TabItem>
+		</TabControl>
+
+		<!--<TabControl Background="#222228">
+			<TabItem Header="Input" Width="100" Margin="10,0,-10,0">
+				<Grid x:Name="View1" Visibility="Visible">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="250"/>
+					</Grid.ColumnDefinitions>
+
+					
+					<Grid x:Name="Objectives_List"
+					MouseLeftButtonDown="Input_Select"
+					Grid.Column="0">
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="*"/>
+						</Grid.RowDefinitions>
+						<Label x:Name="ObjectivesLabel"
+						Content="Objectives"
+						Foreground="White"
+						HorizontalAlignment="Center"
+						Margin="0,15,0,-15"/>
+						<Border x:Name="ObjectivesBorder"
+						Grid.Row="1"
+						Margin="10,25,10,25"
+						BorderThickness="2"
+						CornerRadius="5"
+						BorderBrush="Gray">
+							<ListView Margin="5 5 5 5"
+							Tag="Test">
+
+							</ListView>
+						</Border>
+					</Grid>
+					<Grid x:Name="Categories_List"
+					MouseLeftButtonDown="Input_Select"
+					Grid.Column="1">
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="*"/>
+						</Grid.RowDefinitions>
+						<Label x:Name="CategoriesLabel"
+						Content="Categories"
+						Foreground="White"
+						HorizontalAlignment="Center"
+						Margin="0,15,0,-15"/>
+						<Border x:Name="CategoryBorder"
+						Grid.Row="1"
+						Margin="10,25,10,25"
+						BorderThickness="2"
+						CornerRadius="5"
+						BorderBrush="Gray">
+							<ListView Margin="5 5 5 5">
+
+							</ListView>
+						</Border>
+					</Grid>
+
+					<Grid Grid.Column="2">
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="*"/>
+						</Grid.RowDefinitions>
+						
+						<Label x:Name="Input_Label"
+						Grid.Row="0"
+						Content="Enter Objective:"
+
+						HorizontalAlignment="left"
+						FontWeight="Bold"
+						Foreground="White"
+						Margin="25,25,0,-25"/>
+						<StackPanel Grid.Row="1"
+						Margin="0 25 0 25">
+						
+							<Border Width="200"
+							BorderThickness="2"
+							BorderBrush="Aqua"
+							CornerRadius="2">
+								<TextBox x:Name="Input_Box"
+								Margin="5 5 5 5"
+								MinHeight="30" 
+								KeyDown="ObjectiveInput_KeyDown"
+								TextWrapping="Wrap"
+								BorderThickness="0"/>
+							</Border>
+							<Button Click="AddObjectiveButton_Click"
+							Width="50" 
+							Height="20" 
+							Content="Enter"
+							Margin="10"/>
+						</StackPanel>
+					</Grid>
+
+				</Grid>
+
+			</TabItem>
+			<TabItem Header="Edit" Width="100" Margin="20,0,-20,0">
+			</TabItem>
+			<TabItem Header="Assign" Width="100" Margin="30,0,-30,0">
+			</TabItem>
+			<TabItem Header="Output" Width="100" Margin="40,0,-40,0">
+			</TabItem>
+		</TabControl>-->
+
+
+	</Grid>
+</Window>

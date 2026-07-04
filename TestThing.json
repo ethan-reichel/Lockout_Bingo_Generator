@@ -1,0 +1,42 @@
+{
+	"games": [
+		{
+			"id": 0,
+			"title": "Any_Game",
+			"categories": [
+				{
+					"id": 0,
+					"category": "simple"
+				},
+				{
+					"id": 1,
+					"category": "complex"
+				}
+			]
+
+		}
+	],
+	"goals": [
+		{
+		"id": 0,
+			"goal_text": "Collect {#} coins",
+			"repeatable": false,
+			"games": [
+				{
+					"game_id": 0,
+					"categories": [ 0, 1 ]
+				}
+			],
+			"tokens": [
+				{
+					"id": 0,
+					"type": "int",
+					"default_range": [ 0, 10 ],
+					"game_overrides": [
+						{"game_id": 0, "category_id": 1, "range": [20,100]}
+					]
+				}
+			]
+		}
+	]
+}

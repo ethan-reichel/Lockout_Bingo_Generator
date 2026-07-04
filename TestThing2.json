@@ -1,0 +1,50 @@
+{
+	"games": [
+		{
+			"id": 0,
+			"title": "Any_Game",
+			"categories": [
+				{
+					"id": 0,
+					"name": "simple"
+				},
+				{
+					"id": 1,
+					"name": "complex"
+				}
+			],
+			"goals": [
+				{
+					"id": 0,
+					"goal_text": "Drown",
+					"categories": [0]
+				},
+				{
+					"id": 1,
+					"goal_text": "collect {amount} {currnecy}",
+					"categories": [0,1],
+					"tokens": [
+						{
+							"id": 0,
+							"name": "amount",
+							"type": "num",
+							"default_range": [ 1, 20 ],
+							"overrides": [
+								{
+									"category_id": [ 1 ],
+									"range": [ 50, 100 ]
+								}
+							]
+						},
+						{
+							"id": 1,
+							"name": "currency",
+							"type": "options",
+							"default_range": ["coins","credits","gold"]
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,28 @@
+Schema version: just put "2", it is the version of Lockout
+
+Schema mode: How "official" the schema is.
+	strict: Full validation for ALL board sizes and game modes. Warnings for 
+		anything outside reccommended guidelines. Required for official games 
+		on Lockout.live
+	custom: Full validation with user-specified game modes and max size. Use 
+		this if your game only supports certain game modes or sizes.
+	relaxed: Scema validation only. Constraint validators are skipped. Useful
+	for creative or experimental games.
+
+Game name: Take a big fat guess what goes here.
+
+Set Name: The name of your selection of categories. 
+
+Tag names: I *think* this is for multiple goals that are too similar that you
+	would want to only allow one of them to be selected. (Exclusive tags)
+	If any objective has a tag, then it must be in the tag names list
+
+Objectives:
+	Goal: The actual name of the objective
+	Range: if the goal contains {{X}}, a value from this array is chosen and
+		inserted
+	Progression: Which progression zones the objective can appear in:
+		e: early, m: mid, l: late, n: endgame
+	Board Categories: 
+
+
