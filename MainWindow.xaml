@@ -148,7 +148,7 @@
 			</TabItem>
 			<TabItem Header="TestTab"
 			Width="100">
-				<Grid>
+				<Grid x:Name="TabTemplate">
 					<Grid.ColumnDefinitions>
 						<ColumnDefinition Width="2*"/>
 						<ColumnDefinition Width="3*"/>
@@ -159,7 +159,7 @@
 							<RowDefinition Height="Auto"/>
 							<RowDefinition Height="*"/>
 						</Grid.RowDefinitions>
-						<Label Content="Categories"
+						<Label Content="Boards"
 							Margin="5 0 0 0"
 							Foreground="White"
 							Grid.Row="0"/>

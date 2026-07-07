@@ -13,6 +13,7 @@ using System.IO;
 using Newtonsoft.Json;
 using System.Linq;
 using System.Collections.ObjectModel;
+using System.Windows.Markup;
 
 //This program is built with the Bingosync website in mind, and is not built
 //for Lockout.live
@@ -70,14 +71,14 @@ namespace Lockout_Bingo_Generator
 		}
 		//The objects that will be used to insert data to the JSON file
 
-		public class Category
+		public class Board
 		{ 
 			public int Id {  get; set; }
 			public string Name { get; set; }
 		}
 		public class Override
 		{
-			public List<int> Category_Id { get; set; }
+			public List<int> Board_Id { get; set; }
 			public List<object> Range { get; set; }
 		}
 		public class Token
@@ -92,14 +93,14 @@ namespace Lockout_Bingo_Generator
 		{
 			public int Id { get; set; }
 			public string Goal_Text { get; set; }
-			public List<int> Categories { get; set; }
+			public List<int> Boards { get; set; }
 			public List<Token> Tokens { get; set; }
 		}
 		public class Game
 		{
 			public int Id {  get; set; }
 			public string Title { get; set; }
-			public List<Category> Categories { get; set; } 
+			public List<Board> Boards { get; set; } 
 			public List<Goal> Goals { get; set; }
 		}
 		public class StorageData
@@ -150,17 +151,17 @@ namespace Lockout_Bingo_Generator
 			return _data.Games.Max(g => g.Id) + 1;
 		}
 
-		private void OpenTab(object sender, RoutedEventArgs e){
+		private void OpenTab(object sender, RoutedEventArgs e) {
 			Button clickedButton = sender as Button;
 			Game clickedGame = clickedButton.Tag as Game;
+
+			Grid newGrid = TabTemplate;
+			string xaml = XamlWriter.Save(TabTemplate);
+			Grid content = (Grid)XamlReader.Parse(xaml);
 			
 			TabItem newTab = new TabItem();
 			newTab.Header = clickedGame.Title;
 			newTab.MinWidth = 100;
-
-			Grid content = new Grid();
-			content.Children.Add(new Label { Content = clickedGame.Title });
-
 			newTab.Content = content;
 			if(!IsTabOpen(clickedGame.Title))
 				MainTabControl.Items.Add(newTab);
