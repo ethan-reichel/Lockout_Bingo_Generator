@@ -43,29 +43,26 @@
 			Width="100">
 				<Grid x:Name="Games_List">
 					<Grid.ColumnDefinitions>
-						<ColumnDefinition Width="82*"/>
-						<ColumnDefinition Width="61*"/>
-						<ColumnDefinition Width="28*"/>
-						<ColumnDefinition Width="358*"/>
-						<ColumnDefinition Width="265*"/>
+						<ColumnDefinition Width="2*"/>
+						<ColumnDefinition Width="*"/>
 					</Grid.ColumnDefinitions>
-					<Grid Grid.Column="0" Grid.ColumnSpan="4">
+					<Grid Grid.Column="0">
 						<Grid.RowDefinitions>
 							<RowDefinition Height="Auto"/>
 							<RowDefinition Height="*"/>
 						</Grid.RowDefinitions>
 						<Label Content="Games"
 						Grid.Row="0"
-						Margin="10 0 0 0"
-						Foreground="White"/>
+						Margin="10,0,0,0"
+						Foreground="White" Grid.ColumnSpan="2"/>
 						<Border BorderBrush="LightGray"
-						BorderThickness="2"
-						CornerRadius="5"
-						Grid.Row="1"
-						Margin="10 0 10 10">
+							BorderThickness="2"
+							CornerRadius="5"
+							Grid.Row="1"
+							Margin="10 0 10 10" Grid.ColumnSpan="2">
 							<ListView x:Name="GamesList"
-							Margin="5"
-							Foreground="White">
+								Margin="5"
+								Foreground="White">
 								<ListView.ItemContainerStyle>
 									<Style TargetType="ListViewItem">
 										<Setter Property="HorizontalContentAlignment" Value="Stretch"/>
@@ -190,9 +187,9 @@
 							<ListView/>
 						</Border>
 					</Grid>
-					<Grid
+					<Grid x:Name="CategoryEdit"	Visibility="Visible"
 						Grid.Column="2">
-						
+
 					</Grid>
 				</Grid>
 			</TabItem>
