@@ -1,26 +1,27 @@
 {
   "Games": [
     {
-      "Id": 0,
       "Title": "Smorgs Quest",
       "Boards": null,
       "Goals": null
     },
     {
-      "Id": 1,
-      "Title": "John Simulator",
-      "Boards": null,
-      "Goals": null
-    },
-    {
-      "Id": 2,
       "Title": "Borg Quest",
       "Boards": null,
       "Goals": null
     },
     {
-      "Id": 3,
       "Title": "The Battle of Sushimi",
+      "Boards": null,
+      "Goals": null
+    },
+    {
+      "Title": "Kitty",
+      "Boards": null,
+      "Goals": null
+    },
+    {
+      "Title": "fdgsdf",
       "Boards": null,
       "Goals": null
     }

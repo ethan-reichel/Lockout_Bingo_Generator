@@ -98,7 +98,6 @@ namespace Lockout_Bingo_Generator
 		}
 		public class Game
 		{
-			public int Id {  get; set; }
 			public string Title { get; set; }
 			public List<Board> Boards { get; set; } 
 			public List<Goal> Goals { get; set; }
@@ -137,22 +136,22 @@ namespace Lockout_Bingo_Generator
             if (!string.IsNullOrWhiteSpace(InputText))
             {
 
-				_data.Games.Add(new Game { Id = GetNextGameId(), Title = InputText });
+				_data.Games.Add(new Game {Title = InputText });
 				SaveData();
 				Input_Box.Clear();
             }
 		}
 
-		private int GetNextGameId()
+		/*private int GetNextGameId()
 		{
 			if(_data.Games.Count == 0)
 				return 0;
 
 			return _data.Games.Max(g => g.Id) + 1;
-		}
+		}*/
 
 		private void OpenTab(object sender, RoutedEventArgs e) {
-			Button clickedButton = sender as Button;
+			MenuItem clickedButton = sender as MenuItem;
 			Game clickedGame = clickedButton.Tag as Game;
 
 			Grid newGrid = TabTemplate;
@@ -168,7 +167,7 @@ namespace Lockout_Bingo_Generator
 		}
 
 		private void DeleteGame_Click(object sender, RoutedEventArgs e){
-			Button clickedButton = sender as Button;
+			MenuItem clickedButton = sender as MenuItem;
 			Game clickedGame = clickedButton.Tag as Game;
 
 			MessageBoxResult result = MessageBox.Show(
@@ -210,7 +209,12 @@ namespace Lockout_Bingo_Generator
 			}
 		}
 		private void Window_Click(object sender, MouseButtonEventArgs e){
-			GamesList.SelectedItem = null;
+			
+			MenuItem clickedItem = sender as MenuItem;
+			if (clickedItem == null)
+			{
+				GamesList.SelectedItem = null;
+			}
 		}
 
 		//     private void Input_Select(object sender, MouseButtonEventArgs e){
