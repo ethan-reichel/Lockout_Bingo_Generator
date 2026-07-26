@@ -208,7 +208,7 @@
 						CornerRadius="3"
 						Grid.Column="1"
 						Margin="10 0 10 10 ">
-							<TextBox x:Name="Input_Box"
+							<TextBox x:Name="Game_Input"
 							MinHeight="30"
 							KeyDown="GameInput_KeyDown"/>
 						</Border>

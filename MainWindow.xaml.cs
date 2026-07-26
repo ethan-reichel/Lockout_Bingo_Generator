@@ -14,6 +14,7 @@ using Newtonsoft.Json;
 using System.Linq;
 using System.Collections.ObjectModel;
 using System.Windows.Markup;
+using System.Windows.Threading;
 
 //This program is built with the Bingosync website in mind, and is not built
 //for Lockout.live
@@ -98,9 +99,43 @@ namespace Lockout_Bingo_Generator
 		}
 		public class Game
 		{
+			//Variables
 			public string Title { get; set; }
 			public List<Board> Boards { get; set; } 
 			public List<Goal> Goals { get; set; }
+
+			//Classes
+
+			//public class Board
+			//{
+			//	public int Id { get; set; }
+			//	public string Name { get; set; }
+			//	public int GoalCount { get; set; }	
+			//}
+
+			//public class Goal{
+			//	public int Id { get; set; }
+			//	public string Goal_Text { get; set; }
+			//	public List<int> Boards { get; set; }
+			//	public List<Token> Tokens { get; set; }
+
+			//	//Classes
+			//	public class Token
+			//	{
+			//		public int Id { get; set; }
+			//		public string Name { get; set; }
+			//		public string Type { get; set; }
+			//		public List<object> DefaultRange { get; set; }
+			//		public List<Override> Overrides { get; set; }
+
+			//		//Classes
+			//		public class Override
+			//		{
+			//			public List<int> Board_Id { get; set; }
+			//			public List<object> Range { get; set; }
+			//		}
+			//	}
+			//}
 		}
 		public class StorageData
 		{
@@ -117,38 +152,77 @@ namespace Lockout_Bingo_Generator
 		//Functionality for adding an objective or category
 		private void AddGameButton_Click(object sender, RoutedEventArgs e)
         {
-			InputJSON();
+			AddGame();
 		}
         
         private void GameInput_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
             {
-				InputJSON();
+				AddGame();
             }
 		}
 
 
 		//Script for the Input function
-		private void InputJSON()
+		private void AddGame()
         {
-            string InputText = Input_Box.Text;
+            string InputText = Game_Input.Text;
             if (!string.IsNullOrWhiteSpace(InputText))
             {
-
-				_data.Games.Add(new Game {Title = InputText });
-				SaveData();
-				Input_Box.Clear();
+				if (IsUniqueGame(InputText))
+				{
+					_data.Games.Add(new Game { Title = InputText });
+					SaveData();
+					Game_Input.Clear();
+				}else{
+					ShowWarning("Game Already Exists", Game_Input);
+				}
             }
 		}
 
-		/*private int GetNextGameId()
-		{
-			if(_data.Games.Count == 0)
-				return 0;
+		//========== 'Check for duplicates' functions here ==========
+		public bool IsUniqueGame(string newInput) {
+			foreach (Game game in _data.Games)
+				if (game.Title == newInput)
+					return false;
+			return true;
+		}
+		public bool IsUniqueBoard(string newInput, string gameTitle){
+			Game selectedGame = _data.Games.FirstOrDefault(g => g.Title == gameTitle);
+			if (selectedGame.Boards.Any(b => b.Name == newInput))
+				return false;
+			return true;
+		}
 
-			return _data.Games.Max(g => g.Id) + 1;
-		}*/
+		//========== 'Check for duplicates' functions here ==========
+		
+		
+		//======= Tooltip Warning ========
+		public void ShowWarning(string message, UIElement element){ 
+			ToolTip tooltip = new ToolTip{
+				Content = message,
+				Background = new SolidColorBrush(Colors.White),
+				Foreground = new SolidColorBrush(Colors.Red),
+				BorderBrush = new SolidColorBrush(Colors.DarkRed),
+				Placement = System.Windows.Controls.Primitives.PlacementMode.Bottom,
+				PlacementTarget = element,
+				IsOpen = true
+			};
+			element.SetValue(ToolTipProperty, tooltip);
+
+			DispatcherTimer timer = new DispatcherTimer();
+			timer.Interval = TimeSpan.FromSeconds(3);
+			timer.Tick += (s, e) =>
+			{
+				tooltip.IsOpen = false;
+				timer.Stop();
+			};
+			timer.Start();
+
+		}
+		//======= Tooltip Warning ========
+
 
 		private void OpenTab(object sender, RoutedEventArgs e) {
 			MenuItem clickedButton = sender as MenuItem;
