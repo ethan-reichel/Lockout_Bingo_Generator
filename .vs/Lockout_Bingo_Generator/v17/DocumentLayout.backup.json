@@ -46,7 +46,7 @@
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "D:\\Cattn\u0027s Desktop Applications\\Lockout_Bingo_Generator\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAALgAAAAAAAAAAAAzwM8AAABHAAAAAAAAAA==",
+              "ViewState": "AgIAAN8AAAAAAAAAAAAAAPYAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-22T19:00:10.559Z",
               "EditorCaption": ""
@@ -77,7 +77,7 @@
               "RelativeDocumentMoniker": "MainWindow.xaml",
               "ToolTip": "D:\\Cattn\u0027s Desktop Applications\\Lockout_Bingo_Generator\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
-              "ViewState": "AgIAAJoAAAAAAAAAAAAAANIAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAOMAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-07-22T16:44:23.044Z",
               "EditorCaption": ""
@@ -92,8 +92,7 @@
               "RelativeToolTip": "BingoStorage.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-06-30T02:17:10.678Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-30T02:17:10.678Z"
             }
           ]
         }

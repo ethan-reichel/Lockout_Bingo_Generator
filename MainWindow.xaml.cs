@@ -149,7 +149,9 @@ namespace Lockout_Bingo_Generator
 		public void JSONrecieve(){//getting the data from the JSON file
 			
 		}
-		//Functionality for adding an objective or category
+		
+		
+		//=============== Functions for adding a new game to the list ===============
 		private void AddGameButton_Click(object sender, RoutedEventArgs e)
         {
 			AddGame();
@@ -157,14 +159,15 @@ namespace Lockout_Bingo_Generator
         
         private void GameInput_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Enter)
-            {
-				AddGame();
-            }
+			//Make sure we are in the Games List Tab
+			if (e.Key == Key.Enter)
+			{
+				TabItem selectedTab = MainTabControl.SelectedItem as TabItem;
+				string tabHeader = selectedTab.Header.ToString();
+				if (tabHeader == "Games List")
+					AddGame();
+			}
 		}
-
-
-		//Script for the Input function
 		private void AddGame()
         {
             string InputText = Game_Input.Text;
@@ -180,22 +183,24 @@ namespace Lockout_Bingo_Generator
 				}
             }
 		}
-
-		//========== 'Check for duplicates' functions here ==========
 		public bool IsUniqueGame(string newInput) {
 			foreach (Game game in _data.Games)
 				if (game.Title == newInput)
 					return false;
 			return true;
 		}
+		//=============== Functions for adding a new game to the list ===============
+		
+		
+		//=========== Functions for adding a new board to the list ===========
+
+
 		public bool IsUniqueBoard(string newInput, string gameTitle){
 			Game selectedGame = _data.Games.FirstOrDefault(g => g.Title == gameTitle);
 			if (selectedGame.Boards.Any(b => b.Name == newInput))
 				return false;
 			return true;
 		}
-
-		//========== 'Check for duplicates' functions here ==========
 		
 		
 		//======= Tooltip Warning ========
@@ -235,6 +240,9 @@ namespace Lockout_Bingo_Generator
 			TabItem newTab = new TabItem();
 			newTab.Header = clickedGame.Title;
 			newTab.MinWidth = 100;
+			newTab.Focusable = true;
+			newTab.MouseLeftButtonDown += (s, e) => { Window_Click(s,e);};
+			newTab.Background = new SolidColorBrush(Colors.Transparent);
 			newTab.Content = content;
 			if(!IsTabOpen(clickedGame.Title))
 				MainTabControl.Items.Add(newTab);
@@ -287,7 +295,11 @@ namespace Lockout_Bingo_Generator
 			MenuItem clickedItem = sender as MenuItem;
 			if (clickedItem == null)
 			{
+			Keyboard.ClearFocus();
 				GamesList.SelectedItem = null;
+				if (sender is UIElement element)
+					element.Focus();
+				//Game_Input.focus();
 			}
 		}
 

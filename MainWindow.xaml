@@ -9,6 +9,7 @@
 		Width="800" MinWidth="800"
 		Height="450" MinHeight="450"
 		MouseLeftButtonDown="Window_Click"
+		Focusable="True"
 		Icon="BingoIcon.ico">
 	<Window.Resources>
 		<!-- Tab Control Style -->
@@ -91,12 +92,15 @@
 		</Style>
 	</Window.Resources>
 
-	<Grid Background="#000040">
+	<Grid Background="#000040" >
 		<TabControl x:Name="MainTabControl"
 		Background="#222228">
 			<TabItem Header="Games List"
 			Width="100">
-				<Grid x:Name="Games_List">
+				<Grid x:Name="Games_List"
+				Focusable="True"
+				MouseLeftButtonDown="Window_Click"
+				Background="Transparent">
 					<Grid.ColumnDefinitions>
 						<ColumnDefinition Width="2*"/>
 						<ColumnDefinition Width="*"/>
@@ -232,7 +236,10 @@
 						</MenuItem>
 					</ContextMenu>
 				</TabItem.ContextMenu>
-				<Grid x:Name="TabTemplate">
+				<Grid x:Name="TabTemplate"
+				Focusable="True"
+				MouseLeftButtonDown="Window_Click"
+				Background="Transparent">
 					<Grid.ColumnDefinitions>
 						<ColumnDefinition Width="2*"/>
 						<ColumnDefinition Width="3*"/>
