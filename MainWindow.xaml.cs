@@ -303,29 +303,34 @@ namespace Lockout_Bingo_Generator
 			}
 		}
 
-		//     private void Input_Select(object sender, MouseButtonEventArgs e){
-		//Grid selectedGrid = sender as Grid;
-		//Border selectedBorder = selectedGrid.Children[1] as Border;
-		//Label selectedLabel = selectedGrid.Children[0] as Label;
-		//Label inputLabel = Input_Label;
+        private void Input_Box2_TextChanged(object sender, TextChangedEventArgs e)
+        {
 
-		//if(_selectedBorder != null){
-		//	_selectedBorder.BorderBrush = new SolidColorBrush(Colors.Gray);
-		//	_selectedBorder.BorderThickness = new Thickness(2);
-		//	_selectedLabel.FontWeight = FontWeights.Normal;
-		//	_selectedLabel.Foreground = new SolidColorBrush(Colors.White);
-		//}
-		//_selectedBorder = selectedBorder;
+        }
 
-		//_selectedBorder.BorderBrush = new SolidColorBrush(Colors.Yellow);
-		//_selectedBorder.BorderThickness = new Thickness(4);
-		//_selectedLabel = selectedLabel;
-		//_selectedLabel.Foreground = new SolidColorBrush(Colors.Cyan);
-		//if(_selectedLabel.Name == "ObjectivesLabel"){
-		//	inputLabel.Content = "Enter Objective:";
-		//} else if( _selectedLabel.Name == "CategoriesLabel"){
-		//	inputLabel.Content = "Enter Category:";
-		//}
-		//     }
-	}
+        //     private void Input_Select(object sender, MouseButtonEventArgs e){
+        //Grid selectedGrid = sender as Grid;
+        //Border selectedBorder = selectedGrid.Children[1] as Border;
+        //Label selectedLabel = selectedGrid.Children[0] as Label;
+        //Label inputLabel = Input_Label;
+
+        //if(_selectedBorder != null){
+        //	_selectedBorder.BorderBrush = new SolidColorBrush(Colors.Gray);
+        //	_selectedBorder.BorderThickness = new Thickness(2);
+        //	_selectedLabel.FontWeight = FontWeights.Normal;
+        //	_selectedLabel.Foreground = new SolidColorBrush(Colors.White);
+        //}
+        //_selectedBorder = selectedBorder;
+
+        //_selectedBorder.BorderBrush = new SolidColorBrush(Colors.Yellow);
+        //_selectedBorder.BorderThickness = new Thickness(4);
+        //_selectedLabel = selectedLabel;
+        //_selectedLabel.Foreground = new SolidColorBrush(Colors.Cyan);
+        //if(_selectedLabel.Name == "ObjectivesLabel"){
+        //	inputLabel.Content = "Enter Objective:";
+        //} else if( _selectedLabel.Name == "CategoriesLabel"){
+        //	inputLabel.Content = "Enter Category:";
+        //}
+        //     }
+    }
 }

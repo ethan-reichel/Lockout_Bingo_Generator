@@ -17,30 +17,24 @@
 				{
 					"id": 0,
 					"goal_text": "Drown",
-					"categories": [0]
+					"categories": ["simple"]
 				},
 				{
 					"id": 1,
 					"goal_text": "collect {amount} {currnecy}",
-					"categories": [0,1],
+					"categories": ["simple","complex"],
 					"tokens": [
 						{
 							"id": 0,
 							"name": "amount",
-							"type": "num",
-							"default_range": [ 1, 20 ],
-							"overrides": [
-								{
-									"category_id": [ 1 ],
-									"range": [ 50, 100 ]
-								}
-							]
+							"type": "range"
+						}
+					]
 						},
 						{
 							"id": 1,
 							"name": "currency",
-							"type": "options",
-							"default_range": ["coins","credits","gold"]
+							"type": "select"
 						}
 					]
 				}

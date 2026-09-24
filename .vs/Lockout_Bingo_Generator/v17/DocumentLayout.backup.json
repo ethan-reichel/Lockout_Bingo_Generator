@@ -1,22 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Cattn\u0027s Desktop Applications\\Lockout_Bingo_Generator\\",
+  "WorkspaceRootPath": "E:\\001 Important Stuff\\ProgrammingProjects\\Lockout_Bingo_Generator\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{33EB2ED1-030C-4B73-AF3D-50F86C776149}|Lockout_Bingo_Generator.csproj|d:\\cattn\u0027s desktop applications\\lockout_bingo_generator\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{33EB2ED1-030C-4B73-AF3D-50F86C776149}|Lockout_Bingo_Generator.csproj|e:\\001 important stuff\\programmingprojects\\lockout_bingo_generator\\editgoal.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{33EB2ED1-030C-4B73-AF3D-50F86C776149}|Lockout_Bingo_Generator.csproj|solutionrelative:editgoal.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33EB2ED1-030C-4B73-AF3D-50F86C776149}|Lockout_Bingo_Generator.csproj|e:\\001 important stuff\\programmingprojects\\lockout_bingo_generator\\bingostorage.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{33EB2ED1-030C-4B73-AF3D-50F86C776149}|Lockout_Bingo_Generator.csproj|solutionrelative:bingostorage.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33EB2ED1-030C-4B73-AF3D-50F86C776149}|Lockout_Bingo_Generator.csproj|e:\\001 important stuff\\programmingprojects\\lockout_bingo_generator\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{33EB2ED1-030C-4B73-AF3D-50F86C776149}|Lockout_Bingo_Generator.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{33EB2ED1-030C-4B73-AF3D-50F86C776149}|Lockout_Bingo_Generator.csproj|d:\\cattn\u0027s desktop applications\\lockout_bingo_generator\\mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{33EB2ED1-030C-4B73-AF3D-50F86C776149}|Lockout_Bingo_Generator.csproj|solutionrelative:mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{33EB2ED1-030C-4B73-AF3D-50F86C776149}|Lockout_Bingo_Generator.csproj|d:\\cattn\u0027s desktop applications\\lockout_bingo_generator\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{33EB2ED1-030C-4B73-AF3D-50F86C776149}|Lockout_Bingo_Generator.csproj|e:\\001 important stuff\\programmingprojects\\lockout_bingo_generator\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{33EB2ED1-030C-4B73-AF3D-50F86C776149}|Lockout_Bingo_Generator.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{33EB2ED1-030C-4B73-AF3D-50F86C776149}|Lockout_Bingo_Generator.csproj|d:\\cattn\u0027s desktop applications\\lockout_bingo_generator\\bingostorage.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{33EB2ED1-030C-4B73-AF3D-50F86C776149}|Lockout_Bingo_Generator.csproj|solutionrelative:bingostorage.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{33EB2ED1-030C-4B73-AF3D-50F86C776149}|Lockout_Bingo_Generator.csproj|e:\\001 important stuff\\programmingprojects\\lockout_bingo_generator\\editgoal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33EB2ED1-030C-4B73-AF3D-50F86C776149}|Lockout_Bingo_Generator.csproj|solutionrelative:editgoal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33EB2ED1-030C-4B73-AF3D-50F86C776149}|Lockout_Bingo_Generator.csproj|e:\\001 important stuff\\programmingprojects\\lockout_bingo_generator\\testthing2.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{33EB2ED1-030C-4B73-AF3D-50F86C776149}|Lockout_Bingo_Generator.csproj|solutionrelative:testthing2.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33EB2ED1-030C-4B73-AF3D-50F86C776149}|Lockout_Bingo_Generator.csproj|e:\\001 important stuff\\programmingprojects\\lockout_bingo_generator\\testthing.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{33EB2ED1-030C-4B73-AF3D-50F86C776149}|Lockout_Bingo_Generator.csproj|solutionrelative:testthing.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,74 +37,96 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 175,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 244,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 300,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EditGoal.xaml.cs",
+              "DocumentMoniker": "E:\\001 Important Stuff\\ProgrammingProjects\\Lockout_Bingo_Generator\\EditGoal.xaml.cs",
+              "RelativeDocumentMoniker": "EditGoal.xaml.cs",
+              "ToolTip": "E:\\001 Important Stuff\\ProgrammingProjects\\Lockout_Bingo_Generator\\EditGoal.xaml.cs",
+              "RelativeToolTip": "EditGoal.xaml.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAEwBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T14:45:33.034Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "E:\\001 Important Stuff\\ProgrammingProjects\\Lockout_Bingo_Generator\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "E:\\001 Important Stuff\\ProgrammingProjects\\Lockout_Bingo_Generator\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-09-23T16:08:19.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "EditGoal.xaml",
+              "DocumentMoniker": "E:\\001 Important Stuff\\ProgrammingProjects\\Lockout_Bingo_Generator\\EditGoal.xaml",
+              "RelativeDocumentMoniker": "EditGoal.xaml",
+              "ToolTip": "E:\\001 Important Stuff\\ProgrammingProjects\\Lockout_Bingo_Generator\\EditGoal.xaml",
+              "RelativeToolTip": "EditGoal.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-09-23T16:06:19.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BingoStorage.json",
+              "DocumentMoniker": "E:\\001 Important Stuff\\ProgrammingProjects\\Lockout_Bingo_Generator\\BingoStorage.json",
+              "RelativeDocumentMoniker": "BingoStorage.json",
+              "ToolTip": "E:\\001 Important Stuff\\ProgrammingProjects\\Lockout_Bingo_Generator\\BingoStorage.json",
+              "RelativeToolTip": "BingoStorage.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-23T15:12:32.05Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "D:\\Cattn\u0027s Desktop Applications\\Lockout_Bingo_Generator\\MainWindow.xaml.cs",
+              "DocumentMoniker": "E:\\001 Important Stuff\\ProgrammingProjects\\Lockout_Bingo_Generator\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "D:\\Cattn\u0027s Desktop Applications\\Lockout_Bingo_Generator\\MainWindow.xaml.cs",
+              "ToolTip": "E:\\001 Important Stuff\\ProgrammingProjects\\Lockout_Bingo_Generator\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAN8AAAAAAAAAAAAAAPYAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAACYBAAAAAAAAAIAwwC4BAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-22T19:00:10.559Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\Cattn\u0027s Desktop Applications\\Lockout_Bingo_Generator\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "D:\\Cattn\u0027s Desktop Applications\\Lockout_Bingo_Generator\\MainWindow.xaml",
-              "RelativeToolTip": "MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-07-22T16:42:59.101Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 206,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\Cattn\u0027s Desktop Applications\\Lockout_Bingo_Generator\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "D:\\Cattn\u0027s Desktop Applications\\Lockout_Bingo_Generator\\MainWindow.xaml",
-              "RelativeToolTip": "MainWindow.xaml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAOMAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-07-22T16:44:23.044Z",
-              "EditorCaption": ""
+              "DocumentIndex": 5,
+              "Title": "TestThing2.json",
+              "DocumentMoniker": "E:\\001 Important Stuff\\ProgrammingProjects\\Lockout_Bingo_Generator\\TestThing2.json",
+              "RelativeDocumentMoniker": "TestThing2.json",
+              "ToolTip": "E:\\001 Important Stuff\\ProgrammingProjects\\Lockout_Bingo_Generator\\TestThing2.json",
+              "RelativeToolTip": "TestThing2.json",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB0AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-23T15:36:15.775Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BingoStorage.json",
-              "DocumentMoniker": "D:\\Cattn\u0027s Desktop Applications\\Lockout_Bingo_Generator\\BingoStorage.json",
-              "RelativeDocumentMoniker": "BingoStorage.json",
-              "ToolTip": "D:\\Cattn\u0027s Desktop Applications\\Lockout_Bingo_Generator\\BingoStorage.json",
-              "RelativeToolTip": "BingoStorage.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "TestThing.json",
+              "DocumentMoniker": "E:\\001 Important Stuff\\ProgrammingProjects\\Lockout_Bingo_Generator\\TestThing.json",
+              "RelativeDocumentMoniker": "TestThing.json",
+              "ToolTip": "E:\\001 Important Stuff\\ProgrammingProjects\\Lockout_Bingo_Generator\\TestThing.json",
+              "RelativeToolTip": "TestThing.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-06-30T02:17:10.678Z"
+              "WhenOpened": "2026-09-23T15:36:14.669Z"
             }
           ]
         }
