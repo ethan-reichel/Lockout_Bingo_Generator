@@ -27,15 +27,17 @@
 			<RowDefinition Height="Auto"/> <!-- [4] For the "Save Changes Button-->
 		</Grid.RowDefinitions>
 		<!-- Row 0: Edit/Add Text  Labels -->
-		<Label x:Name="NewGoal"
-			   Content="New Goal" Grid.Row="0"
+        <Grid Grid.Row="0">
+            <Label x:Name="NewGoalLabel"
+			   Content="New Goal" 
 			   HorizontalAlignment="Center"
 			   FontSize="24" Visibility="Visible"/>
-		<Label x:Name="EditGoal"
-			   Content="Edit Goal" Grid.Row="0"
+            <Label x:Name="EditGoalLabel"
+			   Content="Edit Goal" 
 			   HorizontalAlignment="Center"
 			   FontSize="24" Visibility="Hidden"/>
-	   <!-- Row 1: Goal Textbox -->
+        </Grid>
+        <!-- Row 1: Goal Textbox -->
 		<Label Grid.Row="0" Content="Goal:"
 			   VerticalAlignment="Bottom"
 			   Margin="10 0 0 0"/>
@@ -54,7 +56,7 @@
 				Margin="10 0 10 10"
 				Height="30"
 				Width="75"
-				Click="AddTokenButton_Click"/>
+				/>
 		<!-- Row 3: List of Token Parameters -->
 		<Border Grid.Row="3"
 				BorderBrush="LightGray"
@@ -123,35 +125,45 @@
                                    HorizontalAlignment="Center" />-->
                             <Label Grid.Column="3" Content="Number Range"/>
                         </Grid>
-                        <Grid x:Name="NumberRangeToken" Grid.Row="2">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="auto"/>	
-                                <ColumnDefinition Width="auto"/>
+                        <!-- Number Range Token -->
+                        <Grid x:Name="NumberRangeToken" Grid.Row="2" Visibility="Collapsed">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+							<Grid Grid.Row="0">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="auto"/>	
+									<ColumnDefinition Width="auto"/>
                                 
-                            </Grid.ColumnDefinitions>
-                            <Label Content="Min Value:" Grid.Column="0" 
-                                   Width="75"/> 
-                            <TextBox  
-                                     BorderBrush="White" BorderThickness="1"
-                                     Grid.Column="1" MinWidth="30" Height="20"
-                                     />
+								</Grid.ColumnDefinitions>
+								<Label Content="Min Value:" Grid.Column="0" 
+									   Width="75"/> 
+								<TextBox  
+										 BorderBrush="White" BorderThickness="1"
+										 Grid.Column="1" MinWidth="30" Height="20"/>
+							</Grid>
+							<Grid Grid.Row="1">
+								<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="auto"/>	
+								<ColumnDefinition Width="auto"/>
+								</Grid.ColumnDefinitions>
+								<Label Content="Max Value:" Grid.Column="0"
+									   Width="75"/>
+								<TextBox Background="Transparent" 
+										 BorderBrush="White" BorderThickness="1"
+										 Grid.Column="1" MinWidth="30" Height="20"/>
+							</Grid>
                         </Grid>
-                        <Grid Grid.Row="3">
-                            <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="auto"/>	
-							<ColumnDefinition Width="auto"/>
-                            </Grid.ColumnDefinitions>
-                            <Label Content="Max Value:" Grid.Column="0"
-                                   Width="75"/>
-                            <TextBox Background="Transparent" 
-									 BorderBrush="White" BorderThickness="1"
-									 Grid.Column="1" MinWidth="30" Height="20"/>
+                        <Grid x:Name="OptionsToken" Visibility="Visible">
+                            
                         </Grid>
                         <Border Grid.Row="4"
                                 BorderThickness="1"
                                 BorderBrush="LightGray"
                                 Margin="-20 0 -20 0"/>
                     </Grid>
+                        
                 </ListViewItem>
 			</ListView>
 			<!-- Content for the list of token parameters goes here -->
